@@ -6,6 +6,13 @@ class IndexRouter
     constructor()
     {
         this.router = express.Router();
+        this.index_controller = new IndexController();
+        this.initRoutes();
+    }
+
+    initRoutes()
+    {
+        this.router.get('/', (req, res) => this.index_controller.renderIndex(req, res));
     }
 }
 

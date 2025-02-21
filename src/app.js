@@ -1,8 +1,12 @@
-const express = require('express')
-const app = express()
+// <!-- Importação de classes --!>
+const IndexRouter = require('./routes/IndexRouter');
+const ServerService = require('./services/ServerService');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+// <!-- Servidor --!>
+const server = new ServerService();
 
-app.listen(8080);
+server.initRoutes([
+  { path: '/', router: new IndexRouter().router }
+]);
+
+server.start(8080);
