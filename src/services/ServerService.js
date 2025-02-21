@@ -35,5 +35,36 @@ class ServerService
         });
     }
 
-    
+    /**
+     * Inicialização de todas as rotas do servidor.
+     * 
+     * @param {object} routes Caminho e router para renderização de páginas.
+     */
+    initRoutes(routes)
+    {
+        routes.forEach(route => 
+        {
+            if (!route.path || typeof route.path !== 'string')
+            {
+                throw new Error(`((WEB)) => Caminho incorreto: ${route.path}`);
+            }
+
+            this.server.use(route.path, route.router);
+        });
+    }
+
+    /**
+     * Inicialização do servidor express.
+     * 
+     * @param {number} port Porta em que o servidor irá rodar.
+     */
+    start(port)
+    {
+        this.server.listen(port, () => 
+        {
+            console.log(`((WEB)) => Servidor inciado, rodando na porta ${port}!`);
+        });
+    }
 }
+
+module.exports = ServerService;
