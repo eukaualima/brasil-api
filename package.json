@@ -1,0 +1,28 @@
+{
+  "name": "api-brasil",
+  "version": "1.0.0",
+  "description": "Consumindo a API Brasil",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eukaualima/brasil-api.git"
+  },
+  "keywords": [
+    "API",
+    "Brasil"
+  ],
+  "author": "Kauã Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eukaualima/brasil-api/issues"
+  },
+  "homepage": "https://github.com/eukaualima/brasil-api#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
