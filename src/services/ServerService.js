@@ -26,7 +26,7 @@ class ServerService
         this.server.set('views', path.join(__dirname, '../views/pages'));
         
         this.server.use(express.static('views/pages'));
-        // this.server.use('/assets', express.static(path.join(__dirname), '../public/assets'));
+        this.server.use('/assets', express.static(path.join(__dirname, '../public/assets')));
         // this.server.use('/vendor', express.static(path.join(__dirname), '../public/vendor'));
         this.server.use((req, res, next) => 
         {

@@ -1,11 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <title>Consulta de Dados | Brasil API</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Brasil</title>
-</head>
-<body>
-    <p>Nada ainda :)</p>
+    <meta name="description" content="Plataforma para consulta de dados obtidos através da Brasil API.">
+    <meta name="author" content="@eukaualima">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+</head> 
+
+<body class="landing-page">   
+    
+    <!-- GITHUB BUTTON JS -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <div class="page-wrapper">
+        
+        <!-- ******Header****** -->
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                        <span class="text-highlight">Brasil</span> <span class="text-bold">API</span>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Consulte informações de forma rápida e prática utilizando os dados fornecidos pela Brasil API.</p>
+                    <p>Realize pesquisas específicas e acesse diversas categorias de dados em um só lugar.</p>
+                </div>
+                <div class="social-container">
+                    <div class="github-btn mb-2">
+                        <a class="github-button" href="https://github.com/eukaualima/brasil-api" data-size="large" aria-label="Star eukaualima/brasil-api no GitHub">Star</a>
+                        <a class="github-button" href="https://github.com/eukaualima" data-size="large" aria-label="Seguir @eukaualima no GitHub">Seguir @eukaualima</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="cards-section text-center">
+            <div class="container">
+                <h2 class="title">Consulte os dados disponíveis</h2>
+                <div class="intro">
+                    <p>Acesse informações detalhadas de diferentes categorias fornecidas pela Brasil API.</p>
+                </div>
+                <div id="cards-wrapper" class="cards-wrapper row">
+                    <div class="item item-green col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">CEP</h3>
+                            <p class="intro">Consulte informações de um endereço a partir do CEP.</p>
+                        </div>
+                    </div>
+                    <div class="item item-pink col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">DDD</h3>
+                            <p class="intro">Descubra quais cidades pertencem a um determinado DDD.</p>
+                        </div>
+                    </div>
+                    <div class="item item-blue col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">Banco</h3>
+                            <p class="intro">Obtenha informações sobre bancos cadastrados no sistema financeiro.</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">CNPJ</h3>
+                            <p class="intro">Consulte informações cadastrais de empresas pelo CNPJ.</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">IBGE</h3>
+                            <p class="intro">Acesse dados de municípios fornecidos pelo IBGE.</p>
+                        </div>
+                    </div>
+                    <div class="item item-orange col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">Feriados Nacionais</h3>
+                            <p class="intro">Veja a lista de feriados nacionais no Brasil.</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">Tabela FIPE</h3>
+                            <p class="intro">Consulte preços médios de veículos na Tabela FIPE.</p>
+                        </div>
+                    </div>
+                    <div class="item item-blue col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">ISBN</h3>
+                            <p class="intro">Obtenha informações sobre livros através do código ISBN.</p>
+                        </div>
+                    </div>
+                    <div class="item item-pink col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">Domínios .br</h3>
+                            <p class="intro">Verifique informações de domínios registrados no Brasil.</p>
+                        </div>
+                    </div>
+                    <div class="item item-green col-lg-4 col-6">
+                        <div class="item-inner">
+                            <h3 class="title">Taxas</h3>
+                            <p class="intro">Consulte taxas de câmbio e juros atualizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright">Desenvolvido com <i class="fas fa-heart"></i> por @eukaualima</small>
+        </div>
+    </footer>
+    
+    <!-- Main Javascript -->       
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
+    <script src="assets/js/main.js"></script>
+    
 </body>
 </html>
