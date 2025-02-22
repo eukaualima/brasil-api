@@ -47,6 +47,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="main-search-box pt-3 pb-4 d-inline-block">
+                <form class="form-inline search-form justify-content-center" onsubmit="return findCEP(event)">
+                    <input type="text" id="cepInput" placeholder="(sem mapa) Digite o CEP..." class="form-control search-input">
+                    <button type="submit" class="btn search-btn"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="main-search-box pt-3 pb-4 d-inline-block">
+                <form class="form-inline search-form justify-content-center" onsubmit="return findCEPCoordinates(event)">
+                    <input type="text" id="cepInputCoordinates" placeholder="(com mapa) Digite o CEP..." class="form-control search-input">
+                    <button type="submit" class="btn search-btn"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </header>
     </div>
     
@@ -60,6 +74,32 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
     <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function findCEP(event) {
+            event.preventDefault();
+    
+            var cep = document.getElementById("cepInput").value.trim();
+            
+            if (/^\d{8}$/.test(cep)) { 
+                window.location.href = "/cep/" + cep; 
+            } else {
+                alert("Por favor, digite um CEP válido com 8 números.");
+            }
+        }
+
+        function findCEPCoordinates(event) {
+            event.preventDefault();
+    
+            var cep = document.getElementById("cepInputCoordinates").value.trim();
+            
+            if (/^\d{8}$/.test(cep)) { 
+                window.location.href = "/cep/with-coordinates/" + cep; 
+            } else {
+                alert("Por favor, digite um CEP válido com 8 números.");
+            }
+        }
+    </script>
     
 </body>
 </html>
