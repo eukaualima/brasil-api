@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/assets/plugins/elegant_font/css/style.css">    
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head> 
  
 <body class="body-purple">
@@ -73,6 +76,23 @@
                                     <h3 class="question"><i class="fa-solid fa-up-down"></i> Longitude</h3>
                                     <div class="answer"><%= cep_data.location.coordinates.longitude %></div>
                                 </div><!--//section-block-->
+
+                                <div id="map" style="width: 600px; height: 400px;"></div>
+
+                                <script>
+                                    var latitude = <%= cep_data.location.coordinates.latitude %>;
+                                    var longitude = <%= cep_data.location.coordinates.longitude %>;
+                            
+                                    var map = L.map('map').setView([latitude, longitude], 15);
+                            
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        attribution: '&copy; OpenStreetMap contributors'
+                                    }).addTo(map);
+                            
+                                    L.marker([latitude, longitude]).addTo(map)
+                                        .bindPopup('Localização do CEP')
+                                        .openPopup();
+                                </script>
                             </section><!--//doc-section-->              
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
