@@ -13,6 +13,8 @@ class CepRouter
     initRoutes()
     {
         this.router.get('/', (req, res) => this.cep_controller.renderCep(req, res));
+        this.router.get('/:cep', (req, res) => this.cep_controller.renderCepData(req, res));
+        this.router.get('/with-coordinates/:cep', (req, res) => this.cep_controller.renderCepCoordinatesData(req, res));
     }
 }
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= cep_data.city %> | Brasil API</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma para consulta de dados obtidos através da Brasil API.">
+    <meta name="author" content="@eukaualima">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="/assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/assets/plugins/elegant_font/css/style.css">    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css">
+</head> 
+ 
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="/">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Brasil</span> <span class="text-bold">API</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/cep">CEP</a></li>
+                    <li class="breadcrumb-item active"><%= cep_data.city %>/<%= cep_data.state %></li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon"><i class="fa-solid fa-city"></i></span> <%= cep_data.city %>, <%= cep_data.state %></h1>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="general" class="doc-section">
+                                <h2 class="section-title">CEP <%= cep_data.cep %></h2>
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa-solid fa-flag-usa"></i> Estado</h3>
+                                    <div class="answer"><%= cep_data.state %></div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa-solid fa-city"></i> Cidade</h3>
+                                    <div class="answer"><%= cep_data.city %></div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa-solid fa-people-arrows"></i> Bairro</h3>
+                                    <div class="answer"><%= cep_data.neighborhood %></div>
+                                </div><!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="question"><i class="fa-solid fa-street-view"></i> Rua</h3>
+                                    <div class="answer"><%= cep_data.street %></div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->              
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    </div><!--//page-wrapper-->
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div>
+    </footer>
+    
+    <!-- Main Javascript -->       
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script src="/assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+</html>
